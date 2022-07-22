@@ -1,0 +1,606 @@
+// out: ./styl.css, compress: true, sourceMap: true
+@import 'normalize', 'rem', 'font', 'color', 'mixin', 'default';
+
+/* basic */
+$min-width: 320px;
+$img-url: '../images';
+$screen-size-pc: 1200px;
+$screen-size-mobile: max($screen-size-pc);
+
+.ajax-file-upload-container {
+  font-size: 14px;
+}
+
+html {
+  min-width: $min-width;
+  max-width: 100%;
+  font-size: 14px;
+  height: -webkit-fill-available;
+}
+
+body,
+html {
+  font-family: $myfont, 'Malgun Gothic', 'apple sd gothic neo', sans-serif;
+
+  @media (max-width: ($screen-size-pc - 1px)) {
+    &.lock {
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+}
+
+
+ul,li{
+  list-style: none;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  .container {
+    @include container(100%);
+    text-align: left;
+    vertical-align: top;
+    padding: 0 15px;
+
+    @media (min-width: $screen-size-pc) {
+      @include container($screen-size-pc);
+      padding: 0;
+    }
+  }
+
+  /* header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: 1s;
+    .container {
+      width: 100%;
+      height: 50px;
+      background: rgba(21, 21, 21, 0.4);
+      position: relative;
+      a {
+        color: #fff;
+        &.nav-title {
+          font-size: 15px;
+          position: absolute;
+          top: 15px;
+          right: 130px;
+          
+        }
+        &.nav-sub {
+          font-size: 20px;
+          font-weight: 700;
+          position: absolute;
+          top: 11px;
+          right: 20px;
+          
+        }
+      }
+      .nav-content{
+          position: absolute;
+          top: 0;
+            left: 20px;
+          h3{
+            font-size:20px;
+            margin: 0;
+            color: #fff;
+            cursor: pointer;
+          }
+          
+          .sub-content{
+            display: none;
+            background-color: #333;
+            width: 250px;
+            padding: 10px 30px;
+            position: absolute;
+            top: 35px;
+            left: -20px;
+            font-size: 14px;
+            &.on{
+              display: block;
+            }
+            li{
+              h4{
+                font-weight: 500;
+                margin: 10px 0;
+              }
+              ul{
+                li{
+                  a{
+                    color: #dee2e6;
+                  }
+                }
+              }
+            }
+            
+          }
+          
+      }
+    }
+  }
+  section {
+    height: 100vh;
+  }
+  .blan{
+    height: 60vh;
+  }
+  div#content {
+    position: relative;
+    /* MAIN */
+    &.main {
+
+      .page01 {
+        position: relative;
+        background: url('/source/images/bg.gif') no-repeat center / cover fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+          text-align: center;
+          font-size: 130px;
+          color: #fff;
+          margin: 10px 0;
+          font-family: 'KOTRALEAP';
+          font-weight: 500;
+          @media (max-width: $screen-size-mobile) {
+            font-size: 10vw;
+          }
+        }
+      }
+
+      .page02 {
+        position: relative;
+        height: auto;
+        .page02-area {
+          background: url('/source/images/jejubg01.png') no-repeat center / cover;
+          height: 100vh;
+          position: sticky;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          img {
+            @media (max-width: $screen-size-mobile) {
+              width: 350px;
+            }
+          }
+          p {
+            width: 470px;
+            font-size: 30px;
+            color: #fff;
+            font-weight: 500;
+            @media (max-width: $screen-size-mobile) {
+              width: 320px;
+              font-size: 20px;
+            }
+          }
+          span {
+            width: 700px;
+            font-size: 25px;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+            @media (max-width: $screen-size-mobile) {
+              width: 350px;
+              font-size: 15px;
+            }
+          }
+        }
+        
+      }
+
+      .page03 {
+        background: #000;
+        position: relative;
+        height: auto;
+        .scroll-graphic {
+          background: url('/source/images/jejubg02.png') no-repeat center / cover;
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          overflow-x: hidden;
+          transition: all 1s;
+          opacity: 1;
+
+          &.on {
+            opacity: 0;
+          }
+          .graphic-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            opacity: 0;
+            transition: 0.5s;
+            will-change: opacity;
+            @media (max-width: $screen-size-mobile) {
+              padding: 100px 10px 0;
+            }
+            &.visible {
+              opacity: 1;
+            }
+            div {
+              background: rgba(0, 0, 0, 0.8);
+              width: 1200px;
+              padding: 30px;
+              @media (max-width: $screen-size-mobile) {
+                padding: 50px 10px;
+              }
+
+              p {
+                color: #fff;
+                margin: 0;
+                font-size: 33px;
+                text-align: center;
+                @media (max-width: $screen-size-mobile) {
+                  font-size: 3vw;
+                }
+              }
+            }
+          }
+        }
+        .blank {
+          height: 60vh;
+          @media (max-width: $screen-size-mobile) {
+            height: 100vh;
+          }
+        }
+      }
+
+      .page04 {
+        background: #000;
+        display: flex;
+        justify-content: center;
+        transition: all 2s;
+        @media (max-width: $screen-size-mobile) {
+          opacity: 1;
+        }
+
+        h3 {
+          padding-top: 200px;
+          font-size: 90px;
+          color: #fff;
+          @media (max-width: $screen-size-mobile) {
+            font-size: 40px;
+          }
+        }
+      }
+
+      .page05 {
+        background: #000;
+        position: relative;
+        height: auto;
+        .scroll-graphic2 {
+          background: url('/source/images/jejubg03.png') no-repeat center / cover;
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          overflow-x: hidden;
+          transition: all 1s;
+          opacity: 1;
+
+          &.on {
+            &::before {
+              content: '';
+              background: rgba(0, 0, 0, 0.7);
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          &.active {
+            opacity: 0;
+          }
+          .graphic-item2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            opacity: 0;
+            transition: 0.5s;
+            will-change: opacity;
+            @media (max-width: $screen-size-mobile) {
+              padding: 100px 10px 0;
+            }
+            &.visible {
+              opacity: 1;
+            }
+            p {
+              text-align: center;
+              color: #fff;
+              margin: 0;
+              font-size: 30px;
+              @media (max-width: $screen-size-mobile) {
+                font-size: 16px;
+              }
+            }
+            img {
+              width: 35%;
+              @media (max-width: $screen-size-mobile) {
+                width: 300px;
+              }
+            }
+          }
+        }
+        .blank2 {
+          height: 60vh;
+          @media (max-width: $screen-size-mobile) {
+            height: 100vh;
+          }
+        }
+      }
+
+      .page06 {
+        background: #000;
+        display: flex;
+        justify-content: center;
+        transition: all 2s;
+        h3 {
+          padding-top: 200px;
+          font-size: 120px;
+          color: #fff;
+          @media (max-width: $screen-size-mobile) {
+            font-size: 50px;
+          }
+        }
+      }
+
+      .page07 {
+        background: #000;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        transition: all 2s;
+        @media (max-width: $screen-size-mobile) {
+          padding: 0 10px;
+        }
+        p {
+          text-align: center;
+          margin: 0;
+          font-size: 30px;
+          color: #fff;
+          @media (max-width: $screen-size-mobile) {
+            font-size: 15px;
+          }
+          &:first-child {
+            margin-top: 200px;
+          }
+        }
+      }
+
+      .page08 {
+        position: relative;
+        height: auto;
+        .scroll-graphic3 {
+          background: url('/source/images/jejubg04.png') no-repeat center / cover;
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          overflow-x: hidden;
+          .graphic-item3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            opacity: 0;
+            transition: 0.5s;
+            will-change: opacity;
+            @media (max-width: $screen-size-mobile) {
+              padding: 70px 10px 0;
+            }
+            &.visible {
+              opacity: 1;
+            }
+            p {
+              margin: 0;
+              font-size: 30px;
+              color: #000;
+              text-align: center;
+              font-style: 'YeolrinMyeongjo';
+              font-weight: 500;
+              @media (max-width: $screen-size-mobile) {
+                font-size: 3vw;
+              }
+            }
+          }
+        }
+        .blank3 {
+          height: 60vh;
+          @media (max-width: $screen-size-mobile) {
+            height: 100vh;
+          }
+        }
+      }
+
+      .page09 {
+        height: auto;
+        position: relative;
+        .scroll-graphic4 {
+          background: url('/source/images/jejubg05.png') no-repeat center / cover;
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          overflow-x: hidden;
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+          }
+          .graphic-item4 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            opacity: 0;
+            transition: 0.5s;
+            will-change: opacity;
+            display: none;
+            @media (max-width: $screen-size-mobile) {
+              padding: 0px 10px;
+            }
+            &.visible {
+              opacity: 1;
+              display: flex;
+            }
+            p {
+              font-size: 40px;
+              color: rgba(255, 255, 255, 0.6);
+              margin: 0;
+              @media (max-width: $screen-size-mobile) {
+                // font-size: 20px;
+                font-size: 4vw;
+              }
+            }
+            h3 {
+              font-size: 70px;
+              color: #fff;
+              font-weight: 800;
+              margin: 0;
+              @media (max-width: $screen-size-mobile) {
+                // font-size: 30px;
+                font-size: 5vw;
+              }
+            }
+            a {
+              margin-top: 50px;
+              display: block;
+              width: 838px;
+              height: 605px;
+              @media (max-width: $screen-size-mobile) {
+                width: 350px;
+                height: 250px;
+              }
+              img {
+                width: 100%;
+              }
+              iframe {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+        .blank4 {
+          height: 60vh;
+          @media (max-width: $screen-size-mobile) {
+            height: 100vh;
+            
+          }
+        }
+      }
+      
+    }
+  }
+
+  footer#footer {
+    background-color: #fff;
+    height: auto;
+    div.container {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 0;
+      @media (max-width: $screen-size-mobile) {
+        flex-direction: column;
+        justify-content:flex-start;
+        padding: 40px 20px;
+      }
+      div.logo{
+        margin-top: 10px;
+        @media (max-width: $screen-size-mobile) {
+          margin: 10px auto;
+        }
+      }
+      div.footer-columns{
+        width: 850px;
+        @media (max-width: $screen-size-mobile) {
+          width: 100%;
+        }
+        .footer-link{
+          width: 100%;
+          margin: 0 0 30px;
+          display: flex;
+          justify-content: space-between;
+          @media (max-width: $screen-size-mobile) {
+            display: none;
+          }
+          a{
+            font-size: 15px;
+            font-weight: 500;
+            &:hover{
+              text-decoration:underline;
+            }
+          }
+        }
+        address {
+          color: #666;
+          font-style: normal;
+          @media (max-width: $screen-size-mobile) {
+            width: 100%;
+            margin-top: 20px;
+          }
+          p{
+            margin: 0 15px 5px 0;
+            float: left;
+            font-size: 14px;
+            
+            &.clear{
+              margin-left: 0;
+              clear: both;
+            }
+            &.ban{
+              margin: 20px 0 5px 0;
+              font-weight: 500;
+            }
+            strong{
+              color: #177eb9;
+              font-weight: 400;
+            }
+            span{
+              @media (max-width: $screen-size-mobile) {
+                display: block;
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
+
