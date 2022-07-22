@@ -2325,8 +2325,8 @@ body div#content.main .page03 .scroll-graphic .graphic-item {
   width: 100%;
   height: 100vh;
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
   will-change: opacity;
 }
 
@@ -2366,13 +2366,7 @@ body div#content.main .page03 .scroll-graphic .graphic-item div p {
 }
 
 body div#content.main .page03 .blank {
-  height: 60vh;
-}
-
-@media (max-width: 1200px) {
-  body div#content.main .page03 .blank {
-    height: 100vh;
-  }
+  height: 100vh;
 }
 
 body div#content.main .page04 {
@@ -2457,8 +2451,8 @@ body div#content.main .page05 .scroll-graphic2 .graphic-item2 {
   width: 100%;
   height: 100vh;
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
   will-change: opacity;
 }
 
@@ -2496,13 +2490,7 @@ body div#content.main .page05 .scroll-graphic2 .graphic-item2 img {
 }
 
 body div#content.main .page05 .blank2 {
-  height: 60vh;
-}
-
-@media (max-width: 1200px) {
-  body div#content.main .page05 .blank2 {
-    height: 100vh;
-  }
+  height: 100vh;
 }
 
 body div#content.main .page06 {
@@ -2602,8 +2590,8 @@ body div#content.main .page08 .scroll-graphic3 .graphic-item3 {
   width: 100%;
   height: 100vh;
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
   will-change: opacity;
 }
 
@@ -2633,13 +2621,7 @@ body div#content.main .page08 .scroll-graphic3 .graphic-item3 p {
 }
 
 body div#content.main .page08 .blank3 {
-  height: 60vh;
-}
-
-@media (max-width: 1200px) {
-  body div#content.main .page08 .blank3 {
-    height: 100vh;
-  }
+  height: 100vh;
 }
 
 body div#content.main .page09 {
@@ -2689,8 +2671,8 @@ body div#content.main .page09 .scroll-graphic4 .graphic-item4 {
           justify-content: center;
   height: 100vh;
   opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
   will-change: opacity;
   display: none;
 }
@@ -2757,13 +2739,7 @@ body div#content.main .page09 .scroll-graphic4 .graphic-item4 a iframe {
 }
 
 body div#content.main .page09 .blank4 {
-  height: 60vh;
-}
-
-@media (max-width: 1200px) {
-  body div#content.main .page09 .blank4 {
-    height: 100vh;
-  }
+  height: 100vh;
 }
 
 body footer#footer {
@@ -2862,19 +2838,29 @@ body footer#footer div.container div.footer-columns address p.clear {
   clear: both;
 }
 
-body footer#footer div.container div.footer-columns address p.ban {
-  margin: 20px 0 5px 0;
-  font-weight: 500;
-}
-
-body footer#footer div.container div.footer-columns address p strong {
-  color: #177eb9;
-  font-weight: 400;
-}
-
 @media (max-width: 1200px) {
   body footer#footer div.container div.footer-columns address p span {
     display: block;
     margin-top: 5px;
   }
+}
+
+body footer#footer div.container div.footer-columns .ban {
+  font-size: 14px;
+  margin: 20px 0 5px 0;
+  font-weight: 500;
+  color: #666;
+  float: left;
+}
+
+body footer#footer div.container div.footer-columns .copyright {
+  font-size: 14px;
+  color: #666;
+  float: left;
+  margin: 0;
+}
+
+body footer#footer div.container div.footer-columns .copyright strong {
+  color: #177eb9;
+  font-weight: 400;
 }
