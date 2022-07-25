@@ -32,7 +32,7 @@ $(function(){
     graphicElems2[i].dataset.index = i;
   }
   
-  $(window).on("scroll",_.throttle(() => {
+  $(window).on("scroll",() => {
     const scr = $(window).scrollTop(); // 스크롤 값 얻기
     const scrollBottom = $(window).scrollTop() + $(window).height(); // 스크롤 바텀 값
     
@@ -148,7 +148,7 @@ $(function(){
 
     
 
-  },300))
+  })
 
 });
     
