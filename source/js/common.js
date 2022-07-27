@@ -1,35 +1,35 @@
 
 $(function(){
   AOS.init();
-  submenu();
+  // submenu();
 
 
-  const blankElems = $('.blank');
-  const graphicElems = $('.graphic-item');
-  let currentItem;
-
-  const blankElems2 = $('.blank2');
-  const graphicElems2 = $('.graphic-item2');
+  const blankElems2 = $('.news02 .blank2');
+  const graphicElems2 = $('.news02 .graphic-item2');
   let currentItem2;
 
-  const blankElems3 = $('.blank3');
-  const graphicElems3 = $('.graphic-item3');
+  const blankElems3 = $('.news02 .blank3');
+  const graphicElems3 = $('.news02 .graphic-item3');
   let currentItem3;
 
-  const blankElems4 = $('.blank4');
-  const graphicElems4 = $('.graphic-item4');
+  const blankElems4 = $('.news02 .blank4');
+  const graphicElems4 = $('.news02 .graphic-item4');
   let currentItem4;
 
+  const blankElems5 = $('.news02 .blank5');
+  const graphicElems5 = $('.news02 .graphic-item5');
+  let currentItem5;
 
-  for (let i = 0; i < blankElems.length; i++) {
-    
-    blankElems[i].dataset.index = i;
-    graphicElems[i].dataset.index = i;
-  }
+
   for (let i = 0; i < blankElems2.length; i++) {
     
     blankElems2[i].dataset.index = i;
     graphicElems2[i].dataset.index = i;
+  }
+  for (let i = 0; i < blankElems3.length; i++) {
+    
+    blankElems3[i].dataset.index = i;
+    graphicElems3[i].dataset.index = i;
   }
   
   $(window).on("scroll",() => {
@@ -39,28 +39,8 @@ $(function(){
 
 
 
-    // 화면 전환 스티키1
-    // page03
-    let blank;
-    let boundingRect;
-  
-    for (let i = 0; i < blankElems.length; i++) {
-        blank = blankElems[i];
-      boundingRect = blank.getBoundingClientRect();
-      if (!blank) continue;
-
-      if (boundingRect.top > window.innerHeight * 0.2 && boundingRect.top < window.innerHeight * 0.9) {
-        if (currentItem) {
-          currentItem.classList.remove('visible');
-        }
-
-        currentItem = graphicElems[blank.dataset.index];
-        currentItem.classList.add('visible');
-      }
-    }
-
     // 화면 전환 스티키2
-    // page05
+    // page03
     let blank2;
     let boundingRect2;
   
@@ -79,8 +59,8 @@ $(function(){
       }
     }
 
-    // 화면 전환 스티키3
-    // page08
+    // 화면 전환 스티키2
+    // page05
     let blank3;
     let boundingRect3;
   
@@ -99,8 +79,8 @@ $(function(){
       }
     }
 
-    // 화면 전환 스티키4
-    // page09
+    // 화면 전환 스티키3
+    // page08
     let blank4;
     let boundingRect4;
   
@@ -119,29 +99,61 @@ $(function(){
       }
     }
 
-    // page03
-    const ofset01 = $('.page04').offset().top;
-    if(scrollBottom>ofset01){
-      $('.scroll-graphic').addClass('on')
-    } else {
-      $('.scroll-graphic').removeClass('on')
+    // 화면 전환 스티키4
+    // page09
+    let blank5;
+    let boundingRect5;
+  
+    for (let i = 0; i < blankElems5.length; i++) {
+        blank5 = blankElems5[i];
+      boundingRect5 = blank5.getBoundingClientRect();
+      if (!blank5) continue;
+
+      if (boundingRect5.top > window.innerHeight * 0.2 && boundingRect5.top < window.innerHeight * 0.9) {
+        if (currentItem5) {
+          currentItem5.classList.remove('visible');
+        }
+
+        currentItem5 = graphicElems5[blank5.dataset.index];
+        currentItem5.classList.add('visible');
+      }
     }
 
-
-    //page05
-    const ofset02 = $('#page05').offset().top;
-    if(scrollBottom>ofset02){
+    // page03
+    const page04 = $('.news02 .page04')
+    let ofset01
+    if(page04.length){
+      ofset01 = page04.offset().top;
+    }
+    if(scrollBottom>ofset01){
       $('.scroll-graphic2').addClass('on')
     } else {
       $('.scroll-graphic2').removeClass('on')
     }
 
-    //page 06
-    const ofset03 = $('.page06').offset().top;
-    if(scrollBottom>ofset03){
-      $('.scroll-graphic2').addClass('active')
+
+    //page05
+    const page05 = $('.news02 #page05')
+    let ofset02
+    if(page05.length){
+      ofset02 = page05.offset().top;
+    }
+    if(scrollBottom>ofset02){
+      $('.scroll-graphic3').addClass('on')
     } else {
-      $('.scroll-graphic2').removeClass('active')
+      $('.scroll-graphic3').removeClass('on')
+    }
+
+    //page 06
+    const page06 =  $('.news02 .page06')
+    let ofset03
+    if(page06.length){
+      ofset03 = page06.offset().top;
+    }
+    if(scrollBottom>ofset03){
+      $('.scroll-graphic3').addClass('active')
+    } else {
+      $('.scroll-graphic3').removeClass('active')
     }
 
 
@@ -154,15 +166,9 @@ $(function(){
     
 
 
-function submenu(){
-  // $('.nav-content li h3').on('mouseover',function(){
-  //   $('.sub-content').addClass('on')
-  // })
-  // $('#header').on('mouseleave',function(){
-  //   $('.sub-content').removeClass('on')
-  // })
+// function submenu(){
 
-  $('.nav-content li h3').on('click',function(){
-    $('.sub-content').toggle()
-  })
-}
+//   $('.nav-content li h3').on('click',function(){
+//     $('.sub-content').toggle()
+//   })
+// }
