@@ -2631,7 +2631,7 @@ body div#content.news02 .page09 {
 }
 
 body div#content.news02 .page09 .scroll-graphic5 {
-  background: url("/source/images/jejubg05.png") no-repeat center/cover;
+  background: url("/source/images/jejubg05.png") no-repeat center/cover fixed;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
