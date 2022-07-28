@@ -405,38 +405,45 @@ th {
 }
 
 @font-face {
-  font-family: 'S-CoreDream';
-  src: url(../font/S-CoreDream-4Regular.woff) format("woff");
-  font-weight: 400;
+  font-family: 'Noto Sans KR';
   font-style: normal;
+  font-weight: 100;
+  src: url(../font/NotoSansKR-Thin.woff2) format("woff2"), url(../font/NotoSansKR-Thin.woff) format("woff"), url(../font/NotoSansKR-Thin.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'S-CoreDream';
-  src: url(../font/S-CoreDream-5Medium.woff) format("woff");
-  font-weight: 500;
+  font-family: 'Noto Sans KR';
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'S-CoreDream';
-  src: url(../font/S-CoreDream-7ExtraBold.woff) format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'YeolrinMyeongjo';
-  src: url(../font/YeolrinMyeongjo-Light.woff) format("woff");
   font-weight: 300;
-  font-style: normal;
+  src: url(../font/NotoSansKR-Light.woff2) format("woff2"), url(../font/NotoSansKR-Light.woff) format("woff"), url(../font/NotoSansKR-Light.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'YeolrinMyeongjo';
-  src: url(../font/YeolrinMyeongjo-Bold.woff) format("woff");
-  font-weight: 700;
+  font-family: 'Noto Sans KR';
   font-style: normal;
+  font-weight: 400;
+  src: url(../font/NotoSansKR-Regular.woff2) format("woff2"), url(../font/NotoSansKR-Regular.woff2) format("woff"), url(../font/NotoSansKR-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../font/NotoSansKR-Medium.woff2) format("woff2"), url(../font/NotoSansKR-Medium.woff) format("woff"), url(../font/NotoSansKR-Medium.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../font/NotoSansKR-Bold.woff2) format("woff2"), url(../font/NotoSansKR-Bold.woff) format("woff"), url(../font/NotoSansKR-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../font/NotoSansKR-Black.woff2) format("woff2"), url(../font/NotoSansKR-Black.woff) format("woff"), url(../font/NotoSansKR-Black.otf) format("opentype");
 }
 
 div#content.sub01 div.sub-head {
@@ -558,22 +565,22 @@ input[type="password"] {
 
 s
 input[type="password"]::-webkit-input-placeholder {
-  font-family: "S-CoreDream", "YeolrinMyeongjo", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 s
 input[type="password"]:-ms-input-placeholder {
-  font-family: "S-CoreDream", "YeolrinMyeongjo", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 s
 input[type="password"]::-ms-input-placeholder {
-  font-family: "S-CoreDream", "YeolrinMyeongjo", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 s
 input[type="password"]::placeholder {
-  font-family: "S-CoreDream", "YeolrinMyeongjo", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 .sr-only {
@@ -2063,7 +2070,7 @@ html {
 
 body,
 html {
-  font-family: "S-CoreDream", "YeolrinMyeongjo", "Malgun Gothic", "apple sd gothic neo", sans-serif;
+  font-family: "Noto Sans KR", "Malgun Gothic", "apple sd gothic neo", sans-serif;
 }
 
 @media (max-width: 1199px) {
@@ -2608,10 +2615,9 @@ body div#content.news02 .page08 .scroll-graphic4 .graphic-item4.visible {
 
 body div#content.news02 .page08 .scroll-graphic4 .graphic-item4 p {
   margin: 0;
-  font-size: 30px;
+  font-size: 34px;
   color: #000;
   text-align: center;
-  font-style: 'YeolrinMyeongjo';
   font-weight: 500;
 }
 
