@@ -139,9 +139,9 @@ $(function(){
       ofset02 = page05.offset().top;
     }
     if(scrollBottom>ofset02){
-      $('.scroll-graphic3').addClass('on')
+      $('.scroll-graphic3 .bg').addClass('on')
     } else {
-      $('.scroll-graphic3').removeClass('on')
+      $('.scroll-graphic3 .bg').removeClass('on')
     }
 
     //page 06
