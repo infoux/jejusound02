@@ -2368,9 +2368,11 @@ body .content.news02 .page03 .scroll-graphic2 .graphic-item2 {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
   height: 100vh;
   opacity: 0;
   -webkit-transition: 1s;
@@ -2658,9 +2660,11 @@ body .content.news02 .page08 .scroll-graphic4 .graphic-item4 {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
   height: 100vh;
   opacity: 0;
   -webkit-transition: 1s;
@@ -2715,21 +2719,13 @@ body .content.news02 .page09 .scroll-graphic5 .bg {
   height: 100%;
 }
 
-body .content.news02 .page09 .scroll-graphic5 .bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-}
-
 body .content.news02 .page09 .scroll-graphic5 .bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
 }
 
 body .content.news02 .page09 .scroll-graphic5 .graphic-item5 {
@@ -2739,7 +2735,7 @@ body .content.news02 .page09 .scroll-graphic5 .graphic-item5 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
